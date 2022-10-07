@@ -1,3 +1,9 @@
 /.DS_Store
 /.pytest_cache
 /__pycache__
+framework/__pycache__
+tests/__pycache__
+tests/login/__pycache__
+tests/sidebar/__pycache__
+utils/__pycache__
+tests/sidebar/__pycache__

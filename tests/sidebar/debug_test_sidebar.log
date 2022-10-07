@@ -1,0 +1,361 @@
+2022-10-07T16:41:14.976193+0300 DEBUG Starting test_sidebar_hub_item
+2022-10-07T16:41:15.969074+0300 DEBUG Tap on Log In button
+2022-10-07T16:41:17.672095+0300 DEBUG Writing password in login field
+2022-10-07T16:41:18.207678+0300 DEBUG Writing mail in login field
+2022-10-07T16:41:19.474857+0300 DEBUG Tap on Log In button
+2022-10-07T16:41:26.335840+0300 ERROR An error has been caught in function 'pytest_pyfunc_call', process 'MainProcess' (49168), thread 'MainThread' (46476):
+Traceback (most recent call last):
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <zipimporter object "C:\Users\Alex\AppData\Local\P...
+           │         └ <code object <module> at 0x0000023B7B450EA0, file "C:\Users\Alex\AppData\Local\Programs\Python\Python310\Scripts\pytest.exe\_...
+           └ <function _run_code at 0x0000023B7B04FAC0>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': None, '__package__': '', '__loader__': <zipimporter object "C:\Users\Alex\AppData\Local\P...
+         └ <code object <module> at 0x0000023B7B450EA0, file "C:\Users\Alex\AppData\Local\Programs\Python\Python310\Scripts\pytest.exe\_...
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\Scripts\pytest.exe\__main__.py", line 7, in <module>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\config\__init__.py", line 187, in console_main
+    code = main()
+           └ <function main at 0x0000023B7BB84940>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\config\__init__.py", line 164, in main
+    ret: Union[ExitCode, int] = config.hook.pytest_cmdline_main(
+         │     │                │      │    └ <_HookCaller 'pytest_cmdline_main'>
+         │     │                │      └ <_pytest.config.compat.PathAwareHookProxy object at 0x0000023B7C19EB90>
+         │     │                └ <_pytest.config.Config object at 0x0000023B7C19EA10>
+         │     └ <enum 'ExitCode'>
+         └ typing.Union
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+           │    │         │     │    │                └ {'config': <_pytest.config.Config object at 0x0000023B7C19EA10>}
+           │    │         │     │    └ <function _HookCaller.get_hookimpls at 0x0000023B7B895CF0>
+           │    │         │     └ <_HookCaller 'pytest_cmdline_main'>
+           │    │         └ <_HookCaller 'pytest_cmdline_main'>
+           │    └ <bound method PluginManager._hookexec of <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>>
+           └ <_HookCaller 'pytest_cmdline_main'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+           │    │               │     │        └ {'config': <_pytest.config.Config object at 0x0000023B7C19EA10>}
+           │    │               │     └ [<HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Python3...
+           │    │               └ <_HookCaller 'pytest_cmdline_main'>
+           │    └ <function PluginManager.__init__.<locals>.<lambda> at 0x0000023B7B0BB490>
+           └ <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 84, in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+                                  │     │        │       │    └ <function _multicall at 0x0000023B7B895120>
+                                  │     │        │       └ <_HookCaller 'pytest_cmdline_main'>
+                                  │     │        └ {'config': <_pytest.config.Config object at 0x0000023B7C19EA10>}
+                                  │     └ [<HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Python3...
+                                  └ <_HookCaller 'pytest_cmdline_main'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<_pytest.config.Config object at 0x0000023B7C19EA10>]
+          │         └ <function pytest_cmdline_main at 0x0000023B7BC3EB90>
+          └ <HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Python31...
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 315, in pytest_cmdline_main
+    return wrap_session(config, _main)
+           │            │       └ <function _main at 0x0000023B7BC3EC20>
+           │            └ <_pytest.config.Config object at 0x0000023B7C19EA10>
+           └ <function wrap_session at 0x0000023B7BC3EB00>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 268, in wrap_session
+    session.exitstatus = doit(config, session) or 0
+    │       │            │    │       └ <Session sidebar exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=4>
+    │       │            │    └ <_pytest.config.Config object at 0x0000023B7C19EA10>
+    │       │            └ <function _main at 0x0000023B7BC3EC20>
+    │       └ <ExitCode.OK: 0>
+    └ <Session sidebar exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=4>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 322, in _main
+    config.hook.pytest_runtestloop(session=session)
+    │      │    │                          └ <Session sidebar exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=4>
+    │      │    └ <_HookCaller 'pytest_runtestloop'>
+    │      └ <_pytest.config.compat.PathAwareHookProxy object at 0x0000023B7C19EB90>
+    └ <_pytest.config.Config object at 0x0000023B7C19EA10>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+           │    │         │     │    │                └ {'session': <Session sidebar exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=4>}
+           │    │         │     │    └ <function _HookCaller.get_hookimpls at 0x0000023B7B895CF0>
+           │    │         │     └ <_HookCaller 'pytest_runtestloop'>
+           │    │         └ <_HookCaller 'pytest_runtestloop'>
+           │    └ <bound method PluginManager._hookexec of <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>>
+           └ <_HookCaller 'pytest_runtestloop'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+           │    │               │     │        └ {'session': <Session sidebar exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=4>}
+           │    │               │     └ [<HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Python3...
+           │    │               └ <_HookCaller 'pytest_runtestloop'>
+           │    └ <function PluginManager.__init__.<locals>.<lambda> at 0x0000023B7B0BB490>
+           └ <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 84, in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+                                  │     │        │       │    └ <function _multicall at 0x0000023B7B895120>
+                                  │     │        │       └ <_HookCaller 'pytest_runtestloop'>
+                                  │     │        └ {'session': <Session sidebar exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=4>}
+                                  │     └ [<HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Python3...
+                                  └ <_HookCaller 'pytest_runtestloop'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Session sidebar exitstatus=<ExitCode.OK: 0> testsfailed=0 testscollected=4>]
+          │         └ <function pytest_runtestloop at 0x0000023B7BC3ED40>
+          └ <HookImpl plugin_name='main', plugin=<module '_pytest.main' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Python31...
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\main.py", line 347, in pytest_runtestloop
+    item.config.hook.pytest_runtest_protocol(item=item, nextitem=nextitem)
+    │    │                                        │              └ <Function test_sidebar_settings_item>
+    │    │                                        └ <Function test_sidebar_hub_item>
+    │    └ <member 'config' of 'Node' objects>
+    └ <Function test_sidebar_hub_item>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+           │    │         │     │    │                └ {'item': <Function test_sidebar_hub_item>, 'nextitem': <Function test_sidebar_settings_item>}
+           │    │         │     │    └ <function _HookCaller.get_hookimpls at 0x0000023B7B895CF0>
+           │    │         │     └ <_HookCaller 'pytest_runtest_protocol'>
+           │    │         └ <_HookCaller 'pytest_runtest_protocol'>
+           │    └ <bound method PluginManager._hookexec of <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>>
+           └ <_HookCaller 'pytest_runtest_protocol'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+           │    │               │     │        └ {'item': <Function test_sidebar_hub_item>, 'nextitem': <Function test_sidebar_settings_item>}
+           │    │               │     └ [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Pyt...
+           │    │               └ <_HookCaller 'pytest_runtest_protocol'>
+           │    └ <function PluginManager.__init__.<locals>.<lambda> at 0x0000023B7B0BB490>
+           └ <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 84, in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+                                  │     │        │       │    └ <function _multicall at 0x0000023B7B895120>
+                                  │     │        │       └ <_HookCaller 'pytest_runtest_protocol'>
+                                  │     │        └ {'item': <Function test_sidebar_hub_item>, 'nextitem': <Function test_sidebar_settings_item>}
+                                  │     └ [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Pyt...
+                                  └ <_HookCaller 'pytest_runtest_protocol'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Function test_sidebar_hub_item>, <Function test_sidebar_settings_item>]
+          │         └ <function pytest_runtest_protocol at 0x0000023B7BC3D900>
+          └ <HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Pyth...
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 111, in pytest_runtest_protocol
+    runtestprotocol(item, nextitem=nextitem)
+    │               │              └ <Function test_sidebar_settings_item>
+    │               └ <Function test_sidebar_hub_item>
+    └ <function runtestprotocol at 0x0000023B7BC3D990>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 130, in runtestprotocol
+    reports.append(call_and_report(item, "call", log))
+    │       │      │               │             └ True
+    │       │      │               └ <Function test_sidebar_hub_item>
+    │       │      └ <function call_and_report at 0x0000023B7BC3DD80>
+    │       └ <method 'append' of 'list' objects>
+    └ [<TestReport 'test_sidebar.py::test_sidebar_hub_item' when='setup' outcome='passed'>]
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 219, in call_and_report
+    call = call_runtest_hook(item, when, **kwds)
+           │                 │     │       └ {}
+           │                 │     └ 'call'
+           │                 └ <Function test_sidebar_hub_item>
+           └ <function call_runtest_hook at 0x0000023B7BC3DEA0>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 258, in call_runtest_hook
+    return CallInfo.from_call(
+           │        └ <classmethod(<function CallInfo.from_call at 0x0000023B7BC3E170>)>
+           └ <class '_pytest.runner.CallInfo'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 338, in from_call
+    result: Optional[TResult] = func()
+            │        │          └ <function call_runtest_hook.<locals>.<lambda> at 0x0000023B7EF024D0>
+            │        └ +TResult
+            └ typing.Optional
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 259, in <lambda>
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+            │          │       └ {}
+            │          └ <Function test_sidebar_hub_item>
+            └ <_HookCaller 'pytest_runtest_call'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+           │    │         │     │    │                └ {'item': <Function test_sidebar_hub_item>}
+           │    │         │     │    └ <function _HookCaller.get_hookimpls at 0x0000023B7B895CF0>
+           │    │         │     └ <_HookCaller 'pytest_runtest_call'>
+           │    │         └ <_HookCaller 'pytest_runtest_call'>
+           │    └ <bound method PluginManager._hookexec of <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>>
+           └ <_HookCaller 'pytest_runtest_call'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+           │    │               │     │        └ {'item': <Function test_sidebar_hub_item>}
+           │    │               │     └ [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Pyt...
+           │    │               └ <_HookCaller 'pytest_runtest_call'>
+           │    └ <function PluginManager.__init__.<locals>.<lambda> at 0x0000023B7B0BB490>
+           └ <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 84, in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+                                  │     │        │       │    └ <function _multicall at 0x0000023B7B895120>
+                                  │     │        │       └ <_HookCaller 'pytest_runtest_call'>
+                                  │     │        └ {'item': <Function test_sidebar_hub_item>}
+                                  │     └ [<HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Pyt...
+                                  └ <_HookCaller 'pytest_runtest_call'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Function test_sidebar_hub_item>]
+          │         └ <function pytest_runtest_call at 0x0000023B7BC3DB40>
+          └ <HookImpl plugin_name='runner', plugin=<module '_pytest.runner' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Pyth...
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\runner.py", line 166, in pytest_runtest_call
+    item.runtest()
+    │    └ <function Function.runtest at 0x0000023B7BC90040>
+    └ <Function test_sidebar_hub_item>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\python.py", line 1761, in runtest
+    self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+    │    │                                   └ <Function test_sidebar_hub_item>
+    │    └ <property object at 0x0000023B7BBDA7A0>
+    └ <Function test_sidebar_hub_item>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\hooks.py", line 286, in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+           │    │         │     │    │                └ {'pyfuncitem': <Function test_sidebar_hub_item>}
+           │    │         │     │    └ <function _HookCaller.get_hookimpls at 0x0000023B7B895CF0>
+           │    │         │     └ <_HookCaller 'pytest_pyfunc_call'>
+           │    │         └ <_HookCaller 'pytest_pyfunc_call'>
+           │    └ <bound method PluginManager._hookexec of <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>>
+           └ <_HookCaller 'pytest_pyfunc_call'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 93, in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+           │    │               │     │        └ {'pyfuncitem': <Function test_sidebar_hub_item>}
+           │    │               │     └ [<HookImpl plugin_name='python', plugin=<module '_pytest.python' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Pyt...
+           │    │               └ <_HookCaller 'pytest_pyfunc_call'>
+           │    └ <function PluginManager.__init__.<locals>.<lambda> at 0x0000023B7B0BB490>
+           └ <_pytest.config.PytestPluginManager object at 0x0000023B7B491750>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\manager.py", line 84, in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+                                  │     │        │       │    └ <function _multicall at 0x0000023B7B895120>
+                                  │     │        │       └ <_HookCaller 'pytest_pyfunc_call'>
+                                  │     │        └ {'pyfuncitem': <Function test_sidebar_hub_item>}
+                                  │     └ [<HookImpl plugin_name='python', plugin=<module '_pytest.python' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Pyt...
+                                  └ <_HookCaller 'pytest_pyfunc_call'>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\pluggy\callers.py", line 187, in _multicall
+    res = hook_impl.function(*args)
+          │         │         └ [<Function test_sidebar_hub_item>]
+          │         └ <function pytest_pyfunc_call at 0x0000023B7BC6C670>
+          └ <HookImpl plugin_name='python', plugin=<module '_pytest.python' from 'C:\\Users\\Alex\\AppData\\Local\\Programs\\Python\\Pyth...
+
+> File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\_pytest\python.py", line 192, in pytest_pyfunc_call
+    result = testfunction(**testargs)
+             │              └ {'user_sidebar_fixture': <framework.sidebar.SideBar object at 0x0000023B7EEFB400>}
+             └ <function test_sidebar_hub_item at 0x0000023B7EF01510>
+
+  File "D:\dev_in_test_app_team\tests\sidebar\test_sidebar.py", line 22, in test_sidebar_hub_item
+    page.click_later_button()
+    │    └ <function SideBar.click_later_button at 0x0000023B7DDA8790>
+    └ <framework.sidebar.SideBar object at 0x0000023B7EEFB400>
+
+  File "D:\dev_in_test_app_team\framework\sidebar.py", line 34, in click_later_button
+    self.click_element(*MainPageLocators.CHECK_LATER_BUTTON)
+    │    │              │                └ ('id', 'com.ajaxsystems:id/cancel_button')
+    │    │              └ <class 'framework.locators.MainPageLocators'>
+    │    └ <function SideBar.click_element at 0x0000023B7DD73BE0>
+    └ <framework.sidebar.SideBar object at 0x0000023B7EEFB400>
+
+  File "D:\dev_in_test_app_team\framework\sidebar.py", line 12, in click_element
+    self.driver.find_element(how, what).click()
+    │    │      │            │    └ 'com.ajaxsystems:id/cancel_button'
+    │    │      │            └ 'id'
+    │    │      └ <function WebDriver.find_element at 0x0000023B7DD735B0>
+    │    └ <appium.webdriver.webdriver.WebDriver (session="cf626b4c-313d-41cb-b204-387056ae3654")>
+    └ <framework.sidebar.SideBar object at 0x0000023B7EEFB400>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+    │    │        │       └ 'clickElement'
+    │    │        └ <class 'selenium.webdriver.remote.command.Command'>
+    │    └ <function WebElement._execute at 0x0000023B7DAEF370>
+    └ <appium.webdriver.webelement.WebElement (session="cf626b4c-313d-41cb-b204-387056ae3654", element="00000000-0000-0619-ffff-fff...
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+           │    │       │       │        └ {'id': '00000000-0000-0619-ffff-ffff0000005a', 'sessionId': 'cf626b4c-313d-41cb-b204-387056ae3654'}
+           │    │       │       └ 'clickElement'
+           │    │       └ <function WebDriver.execute at 0x0000023B7DC6A050>
+           │    └ <appium.webdriver.webdriver.WebDriver (session="cf626b4c-313d-41cb-b204-387056ae3654")>
+           └ <appium.webdriver.webelement.WebElement (session="cf626b4c-313d-41cb-b204-387056ae3654", element="00000000-0000-0619-ffff-fff...
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+    │    │             │              └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"The element \'By.id: com.ajaxsystems:id/canc...
+    │    │             └ <function MobileErrorHandler.check_response at 0x0000023B7DD41360>
+    │    └ <appium.webdriver.errorhandler.MobileErrorHandler object at 0x0000023B7EEFB3D0>
+    └ <appium.webdriver.webdriver.WebDriver (session="cf626b4c-313d-41cb-b204-387056ae3654")>
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\appium\webdriver\errorhandler.py", line 31, in check_response
+    raise wde
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\appium\webdriver\errorhandler.py", line 26, in check_response
+    super().check_response(response)
+                           └ {'status': 404, 'value': '{"value":{"error":"stale element reference","message":"The element \'By.id: com.ajaxsystems:id/canc...
+
+  File "C:\Users\Alex\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+          │               │        │       └ None
+          │               │        └ None
+          │               └ "The element 'By.id: com.ajaxsystems:id/cancel_button' does not exist in DOM anymore"
+          └ <class 'selenium.common.exceptions.StaleElementReferenceException'>
+
+selenium.common.exceptions.StaleElementReferenceException: Message: The element 'By.id: com.ajaxsystems:id/cancel_button' does not exist in DOM anymore
+
+2022-10-07T16:41:37.207102+0300 DEBUG Starting test_sidebar_settings_item
+2022-10-07T16:41:38.841164+0300 DEBUG Tap on Log In button
+2022-10-07T16:41:38.903999+0300 DEBUG Writing password in login field
+2022-10-07T16:41:39.438796+0300 DEBUG Writing mail in login field
+2022-10-07T16:41:39.984223+0300 DEBUG Tap on Log In button
+2022-10-07T16:41:46.271731+0300 DEBUG Tap on Later button
+2022-10-07T16:41:47.202783+0300 DEBUG Tap on Menu icon
+2022-10-07T16:41:48.334729+0300 DEBUG Tap on Settings button
+2022-10-07T16:41:49.294721+0300 DEBUG Checking is that page wich need
+2022-10-07T16:41:49.294721+0300 DEBUG Finish test_sidebar_settings_item
+
+2022-10-07T16:41:59.255303+0300 DEBUG Starting test_sidebar_settings_item
+2022-10-07T16:41:59.960724+0300 DEBUG Tap on Log In button
+2022-10-07T16:42:00.697705+0300 DEBUG Writing password in login field
+2022-10-07T16:42:01.761751+0300 DEBUG Writing mail in login field
+2022-10-07T16:42:02.312735+0300 DEBUG Tap on Log In button
+2022-10-07T16:42:07.316731+0300 DEBUG Tap on Later button
+2022-10-07T16:42:08.247017+0300 DEBUG Tap on Menu icon
+2022-10-07T16:42:09.289767+0300 DEBUG Tap on Help button
+2022-10-07T16:42:10.461646+0300 DEBUG Checking is that page wich need
+2022-10-07T16:42:10.462644+0300 DEBUG Finish test_sidebar_help_item
+
+2022-10-07T16:42:20.720825+0300 DEBUG Starting test_sidebar_settings_item
+2022-10-07T16:42:21.444421+0300 DEBUG Tap on Log In button
+2022-10-07T16:42:22.359516+0300 DEBUG Writing password in login field
+2022-10-07T16:42:23.385819+0300 DEBUG Writing mail in login field
+2022-10-07T16:42:23.934369+0300 DEBUG Tap on Log In button
+2022-10-07T16:42:28.413636+0300 DEBUG Tap on Later button
+2022-10-07T16:42:29.372618+0300 DEBUG Tap on Menu icon
+2022-10-07T16:42:30.735538+0300 DEBUG Tap on Logs button
+2022-10-07T16:42:30.875165+0300 DEBUG Checking is that page wich need
+2022-10-07T16:42:30.875165+0300 DEBUG Finish test_sidebar_logs_item
+
