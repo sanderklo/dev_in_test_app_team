@@ -27,7 +27,7 @@ class TestLoginPage():
     def test_user_not_login(self, password, mail):
         self.page.write_password_in_field(password)
         self.page.write_mail_in_field(mail)
-        logger.debug("Writing incorrect mail and password in login field")
+        logger.debug("Writing mail: {mail} and password: {password} in login field")
         self.page.click_log_in_button()
         self.page.should_not_be_main_page()
         logger.debug("Checking that user cant login in app")
