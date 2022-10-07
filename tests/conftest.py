@@ -1,11 +1,9 @@
 import subprocess
 import time
-from loguru import logger
 import pytest
 from appium import webdriver
 
 from utils.android_utils import android_get_desired_capabilities
-logger.add(".debug_test_login.log", format="{time} {level} {message}", level="DEBUG")
 
 @pytest.fixture(scope='session')
 def run_appium_server():

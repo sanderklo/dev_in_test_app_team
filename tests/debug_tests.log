@@ -1,0 +1,26 @@
+2022-10-07T21:19:25.907946+0300 DEBUG Start test_user_login
+2022-10-07T21:19:27.714695+0300 DEBUG Writing correct mail and password in login field
+2022-10-07T21:19:32.508093+0300 DEBUG Checking that user can login in app
+2022-10-07T21:19:32.508093+0300 DEBUG Finish test_user_login
+
+2022-10-07T21:19:45.118957+0300 DEBUG Writing incorrect mail and password in login field
+2022-10-07T21:20:35.802992+0300 DEBUG Checking that user cant login in app
+2022-10-07T21:20:35.802992+0300 DEBUG Finish test_user_not_login
+
+2022-10-07T21:20:48.869583+0300 DEBUG Writing incorrect mail and password in login field
+2022-10-07T21:21:39.449499+0300 DEBUG Checking that user cant login in app
+2022-10-07T21:21:39.449499+0300 DEBUG Finish test_user_not_login
+
+2022-10-07T21:21:51.663535+0300 DEBUG Writing incorrect mail and password in login field
+2022-10-07T21:22:42.846642+0300 DEBUG Checking that user cant login in app
+2022-10-07T21:22:42.846642+0300 DEBUG Finish test_user_not_login
+
+2022-10-07T21:23:44.218827+0300 DEBUG Starting test_sidebar_menu
+2022-10-07T21:23:47.925395+0300 DEBUG Going to main menu page
+2022-10-07T21:23:53.311484+0300 DEBUG Tap on 'Menu' icon
+2022-10-07T21:23:54.418195+0300 DEBUG Check 'Add Hub' button on sidebar menu
+2022-10-07T21:23:57.938555+0300 DEBUG Check 'Settings' button on sidebar menu
+2022-10-07T21:24:01.239576+0300 DEBUG Check 'Help' button on sidebar menu
+2022-10-07T21:24:04.911554+0300 DEBUG Check 'Logs' button on sidebar menu
+2022-10-07T21:24:05.079420+0300 DEBUG Finish test_sidebar_menu
+
